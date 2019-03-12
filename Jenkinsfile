@@ -3,7 +3,7 @@ pipeline {
     stages {
 		stage("Pull Latest Image") {            
             steps {
-                bat "docker pull rajenderdabas1/selenium-docker"
+                bat "docker pull rajenderdabas1/selenium-docker:latest"
             }
         }
         stage("Start Grid") {            
@@ -19,7 +19,7 @@ pipeline {
 	}
 	post{
 		always{
-			archiveArtifacts artifacts: 'test-output/**'
+			archiveArtifacts artifacts: './**'
 			bat "docker-compose down"		
 		}
     }
