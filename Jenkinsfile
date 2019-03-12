@@ -3,7 +3,7 @@ pipeline {
     stages {
 		stage("Pull Latest Image") {            
             steps {
-                bat "docker pull rajenderdabas/selenium-docker"
+                bat "docker pull rajenderdabas1/selenium-docker"
             }
         }
         stage("Start Grid") {            
